@@ -11,6 +11,18 @@
 	
 	<h3>GET 전송</h3>
 	<p><a href="/HelloWorld/hello.jsp?name=홍길동">GET hello.jsp 호출</a></p>
-	<p><a href="/HelloWorld/hs?name=서블릿">GET helloServlet 호출</a></p>
+	<p><a href="/HelloWorld/hs?name=서블릿">GET helloServlet 호출</a></p> 
+	
+	<h3>POST 전송</h3>
+	<p>Send POST Data to HelloServlet</p>
+	<form method="POST" action="/HelloWorld/hs">
+		<label for="Last name">성</label>
+		<input type="text" id="Last_name" name="Last_name" placeholder="성을 입력해주세요"><br />
+		
+		<label for="first_name">이름</label>
+		<input type="text" id="first_name" name="first_name" placeholder="이름을 입력해주세요"><br />
+		<input type="submit" value="전송" />
+		<input type="reset" value="초기화" />
+	</form>
 </body>
 </html>
