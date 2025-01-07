@@ -60,12 +60,14 @@ public class HelloServlet extends HttpServlet {
 //		name 파라미터를 받음
 		String name = req.getParameter("name");
 		
+//		name 파라미터가 없으면 -> Error
 		if(name == null) {
 			name = "Anonymous";  
+			throw new ServletException("name 파라미터는 필수입니다.");
 		}
 //		환영 메시지 출력
 //		super.doGet(req, resp);
-//		서블릿 마라미터 받아오기
+//		서블릿 파라미터 받아오기
 		ServletConfig config = getServletConfig();
 		logger.info("ServletName:" + config.getInitParameter("servletName"));
 		logger.info("description:" + config.getInitParameter("description"));
